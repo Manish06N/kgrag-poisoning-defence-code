@@ -1,0 +1,32 @@
+bib_key,entry,checked_against,status,notes
+zhao2025,"Zhao et al., Information Fusion 127:103900 (2026); arXiv 2507.08862",Crossref + arXiv,OK,"Authors, title (published title differs from first arXiv title; both given), volume, article number agree. Table 3 values quoted in 6.1/6.8 all found in the local published-version PDF."
+luo2024rog,"Luo et al., RoG, ICLR 2024; arXiv 2310.01061",arXiv,OK (venue not re-fetched),"arXiv title and authors agree; ICLR 2024 venue taken from the earlier session, not re-checked against OpenReview here."
+luo2024gcr,"Luo et al., GCR, ICML 2025; arXiv 2410.13080",arXiv,OK (venue not re-fetched),arXiv title and authors agree; ICML 2025 not re-checked here.
+he2024gretriever,"He et al., G-Retriever",Crossref,UPDATED,"Published at NeurIPS 2024 (vol. 37, pp. 132876-132907); bib entry changed from arXiv-only."
+li2025subgraphrag,"Li et al., SubgraphRAG, ICLR 2025; arXiv 2410.20724",arXiv,OK (venue not re-fetched),Title and authors agree.
+mavromatis2024,"Mavromatis and Karypis, GNN-RAG",Crossref,UPDATED,"Published in Findings of ACL 2025, pp. 16682-16699, doi 10.18653/v1/2025.findings-acl.856, under the title 'GNN-RAG: Graph Neural Retrieval for Efficient Large Language Model Reasoning on Knowledge Graphs'. Bib entry changed; in-text cite key unchanged."
+zhou2025trustrag,"Zhou et al., TrustRAG, arXiv 2501.00879",arXiv,"OK, preprint",No peer-reviewed version found in Crossref (only a Qeios record).
+xiao2026logic,"Xiao et al., LogicPoison, arXiv 2604.02954",arXiv,"OK, preprint",
+zheng2026trigger,"Zheng et al., Trigger as Entity, IEEE TIFS 21 (2026)",Crossref,UPDATED,Pages 5583-5596 and doi 10.1109/TIFS.2026.3699202 added.
+park2026hop,"Park et al., Hop-Decayed Influence, IFIP SEC 2026; arXiv 2610.02373",arXiv journal_ref,UPDATED,"arXiv journal_ref: IFIP AICT vol. 787, pp. 345-358, Springer 2026; added."
+kereopa2026,"Kereopa-Yorke et al., Oracle Poisoning, arXiv 2605.09822",arXiv,"OK, preprint",
+banerjee2021,"Banerjee et al., ICDE 2021",Crossref,UPDATED,Pages 2069-2074 and doi 10.1109/ICDE51399.2021.00202 added.
+you2023,"You et al., MaSS, WWW 2023",Crossref,UPDATED,Pages 2000-2010 and doi 10.1145/3543507.3583203 added.
+shen2025,"Shen et al., ReliabilityRAG, NeurIPS 2025",Crossref,UPDATED,"NeurIPS vol. 38, pp. 51034-51074 added."
+edemacu2025,"Edemacu et al., arXiv 2508.02835",arXiv,"OK, preprint",
+ma2026csrag,"Ma et al., CS-RAG, arXiv 2603.14828",arXiv,"OK, preprint",
+ptruste2022,"Ma et al., PTrustE, KBS 256:109688 (2022)",Crossref,OK,
+ren2026ca2kg,"Ren et al., Ca2KG, WWW 2026",Crossref,OK,doi 10.1145/3774904.3792358 resolves; pp. 3859-3869.
+zou2024,"Zou et al., PoisonedRAG, USENIX Security 2025; arXiv 2402.07867",arXiv,OK (venue not re-fetched),The bib key says 2024; the entry gives 2025.
+fewwords2025,"Wen et al., arXiv 2508.04276",arXiv,"OK, preprint",
+graphragfire2026,"Liang et al., GraphRAG under Fire, IEEE S&P 2026",Crossref + arXiv,OK,doi 10.1109/SP63933.2026.00070 resolves (pp. 195-212). The attack is named GragPoison in this paper (the defence section of the arXiv text refers to GragPoison).
+kepo2026,"Chen et al., KEPo, WWW 2026",Crossref,OK,doi 10.1145/3774904.3792547 resolves (pp. 2308-2319).
+conflictqa2026,"Zhao et al., SIGIR 2026",Crossref + arXiv,OK,doi 10.1145/3805712.3809650 resolves (pp. 2464-2474).
+kim2025,"Kim, Lee, Koo, RAGDefender, ACSAC 2025",Crossref,UPDATED,pp. 1178-1192 and doi 10.1109/ACSAC67867.2025.00093 added.
+noughabi2026,"Alizadeh Noughabi et al., ACL 2026 short, pp. 555-563",Crossref,OK,doi 10.18653/v1/2026.acl-short.47 resolves. The method name HoG-GRAG used in the text was not re-checked against the paper body.
+fei2026,"Fei et al., DMI-RAG, IEEE S&P 2026 poster",none,NOT VERIFIABLE HERE,Poster abstract only; no registry record found. The text already says it is available only as a poster abstract.
+li2026,"Li and Li, TrustRAG: Dual-Factor Trust Gating, SEKE 2026",SEKE paper PDF (ksiresearch.org paper047),PARTLY VERIFIED,"The PDF exists with this title and these authors (Yin Li, Bixin Li; Southeast University). The DOI 10.18293/SEKE2026-047 does not resolve (doi.org 404, Crossref 404), so it was removed from the entry."
+sitkged2026,"Li et al., SIT-KGED, WWW 2026",PDF in papers/07_kg_track,OK (verified from the paper itself),"The downloaded PDF prints the title, the four authors, WWW '26 (Dubai, 4 pages) and doi 10.1145/3774904.3792894. The DOI is not yet registered at Crossref or doi.org, which caused the earlier 404. Entry restored."
+lked2026,"Maoliniyazi et al., LKED, CSCWD 2026",Crossref,OK,doi 10.1109/CSCWD68734.2026.11582556 resolves (pp. 3551-3556).
+angelopoulos2024,"Angelopoulos et al., Conformal Risk Control, ICLR 2024; arXiv 2208.02814",arXiv,OK (venue not re-fetched),
+angelopoulos2021,"Angelopoulos et al., Learn then Test",Crossref,UPDATED,"Published in The Annals of Applied Statistics 19:1641-1662 (2025), doi 10.1214/24-AOAS1998."

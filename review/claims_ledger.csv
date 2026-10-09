@@ -1,0 +1,351 @@
+id,section,quoted_text,paper_value,regenerated_value,source_file,label_regime,n_questions,status,note
+T1.WebQSP-1328.clean,6.2,WebQSP-1328 clean F1,67.2,67.154,runs/kg/clean_*.jsonl,no attack,1328,MATCH,clean run restricted to evaluated ids
+T1.WebQSP-1328.none,6.2,WebQSP-1328 none,45.3,45.262,runs/kg/defended_full_none.jsonl,n/a,1328,MATCH,
+T1.WebQSP-1328.learned2,6.2,WebQSP-1328 learned@2%,61.2,61.158,runs/kg/defended_full_learned-dev_fpr0.02.jsonl,original,1328,MATCH,
+T1.WebQSP-1328.crc,6.2,WebQSP-1328 conformal,60.1,60.117,runs/kg_strict/defended_full_crc-dev_a0.05.jsonl,strict,1328,MATCH,
+T1.WebQSP-1328.oracle,6.2,WebQSP-1328 oracle,65.6,65.561,runs/kg_strict/defended_full_oracle_fpr0.02.jsonl,strict,1328,MATCH,
+T1.CWQ-3231.clean,6.2,CWQ-3231 clean F1,48.9,48.929,runs/kg/clean_*.jsonl,no attack,3231,MATCH,clean run restricted to evaluated ids
+T1.CWQ-3231.none,6.2,CWQ-3231 none,35.3,35.277,runs/kg/defended_cwqfull_none.jsonl,n/a,3231,MATCH,
+T1.CWQ-3231.learned2,6.2,CWQ-3231 learned@2%,43.6,43.55,runs/kg/defended_cwqfull_learned-dev_fpr0.02.jsonl,original,3231,MATCH,
+T1.CWQ-3231.crc,6.2,CWQ-3231 conformal,43.2,43.179,runs/kg_strict/defended_cwqfull_crc-dev_a0.05.jsonl,strict,3231,MATCH,
+T1.CWQ-3231.oracle,6.2,CWQ-3231 oracle,48.4,48.397,runs/kg_strict/defended_cwqfull_oracle_fpr0.02.jsonl,strict,3231,MATCH,
+T1.gain.crc.web,6.2,conformal gain WebQSP +14.9,14.9,14.854,strict crc minus none,strict,1328,MATCH,"CI recomputed [+12.7,+16.9] vs paper [+12.8,+17.0]"
+T1.gain.crc.cwq,6.2,conformal gain CWQ +7.9,7.9,7.903,strict crc minus none,strict,3231,MATCH,"CI [+6.4,+9.3] vs paper [+6.5,+9.3]"
+T1.gain.l2.web,6.2,2% gain WebQSP +15.9,15.9,15.896,,original,1328,MATCH,
+T1.gain.l2.cwq,6.2,2% gain CWQ +8.3,8.3,8.274,,original,3231,MATCH,
+T1.share.crc.web,6.2/abstract,73.1% (abstract 73),73.1,73.178,"strict crc, strict oracle",strict/strict,1328,ROUNDING,point estimate 73.18
+T1.share.crc.cwq,6.2/abstract,60.2% (abstract 60),60.2,60.232,,strict/strict,3231,MATCH,
+T1.share.l2.web,6.2,78.3% (2% level),78.3,78.308,S3,MIXED: original learned / strict oracle,1328,MATCH,matched original/original = 78.7
+T1.share.l2.cwq,6.2,63.1% (2% level),63.1,63.06,S3,MIXED: original learned / strict oracle,3231,MATCH,matched original/original = 72.8 (runs/kg/review_checks.md)
+T1.rel.recovered,6.2,68% of lost F1 (14.9 of 21.9),68,67.854,,strict,1328,MATCH,
+T1.planted.web none,6.2,planted-answer precision web none,47.4,47.42,runs/kg/defended_full_none.jsonl,,1328,MATCH,a_precision = share of predicted answers that are planted (mean over questions)
+T1.planted.web crc,6.2,planted-answer precision web crc,9.1,9.147,runs/kg_strict/defended_full_crc-dev_a0.05.jsonl,,1328,MATCH,a_precision = share of predicted answers that are planted (mean over questions)
+T1.planted.cwq none,6.2,planted-answer precision cwq none,48.8,48.84,runs/kg/defended_cwqfull_none.jsonl,,3231,MATCH,a_precision = share of predicted answers that are planted (mean over questions)
+T1.planted.cwq crc,6.2,planted-answer precision cwq crc,15.8,15.806,runs/kg_strict/defended_cwqfull_crc-dev_a0.05.jsonl,,3231,MATCH,a_precision = share of predicted answers that are planted (mean over questions)
+T1.EM.none500,6.2,EM 18.2,18.2,18.2,runs/kg/defended_none.jsonl,,500,MATCH,EM = normalised prediction set equals normalised gold set
+T1.EM.crc500,6.2,EM 33.8 (conformal),33.8,33.8,kg_strict/defended_crc-dev_a0.05,strict,500,MATCH,
+T1.EM.clean500,6.2,EM 43.0 clean,43.0,43.0,,,500,MATCH,
+T1.EM.oracle500,6.2,EM 40.0 strict oracle,40.0,40.0,,strict,500,MATCH,
+61.hit.clean,6.1,Hit 83.2,83.2,83.2,defended_clean_none,,500,MATCH,
+61.hit.att,6.1,Hit 78.0,78.0,78.0,defended_none,,500,MATCH,
+61.f1.clean,6.1,F1 67.7,67.7,67.66,,,500,MATCH,
+61.f1.att,6.1,F1 45.9,45.9,45.853,,,500,MATCH,
+61.f1.rel,6.1,F1 -32%,32,32.229,,,500,MATCH,
+61.hit.rel,6.1,Hit -6%,6,6.25,,,500,MATCH,
+61.planted.500,6.1,planted answer appears in 47.7% of outputs,47.7,47.656,defended_none a_precision,,500,MATCH,S4: this is precision. Share of questions whose output contains any planted answer = 71.2%
+61.EM.rel,6.1,EM -58%,58,57.674,,,500,MATCH,
+69.f1rel,6.9,F1 -38%,38,37.83,,,500,MATCH,
+69.hitrel,6.9,Hit -10%,10,9.856,,,500,MATCH,
+69.em.b8,6.9,EM 18.0,18.0,18.0,,,500,MATCH,
+T2.similarity,6.3,similarity F1,42.3,42.287,runs/kg/defended_similarity.jsonl,original,500,MATCH,
+T2.gain.similarity,6.3,similarity gain,-3.6,-3.567,paired,original,500,MATCH,"CI [-5.5,-1.7]"
+T2.perplexity,6.3,perplexity F1,42.5,42.506,runs/kg/defended_perplexity.jsonl,original,500,MATCH,
+T2.gain.perplexity,6.3,perplexity gain,-3.3,-3.348,paired,original,500,MATCH,"CI [-5.9,-0.8]"
+T2.verify,6.3,verify F1,46.5,46.506,runs/kg/defended_verify.jsonl,original,500,MATCH,
+T2.gain.verify,6.3,verify gain,0.7,0.652,paired,original,500,MATCH,"CI [-0.5,+1.8]"
+T2.TransE@2%,6.3,TransE@2% F1,45.8,45.814,runs/kg/defended_kge_fpr0.02.jsonl,original,500,MATCH,
+T2.gain.TransE@2%,6.3,TransE@2% gain,-0.0,-0.039,paired,original,500,MATCH,"CI [-0.6,+0.5]"
+T2.RD conc,6.3,RD conc F1,34.0,33.956,runs/kg/defended_ragdefender-conc.jsonl,original,500,MATCH,
+T2.gain.RD conc,6.3,RD conc gain,-11.9,-11.897,paired,original,500,MATCH,"CI [-15.0,-9.0]"
+T2.RD clust,6.3,RD clust F1,27.1,27.057,runs/kg/defended_ragdefender-clust.jsonl,original,500,MATCH,
+T2.gain.RD clust,6.3,RD clust gain,-18.8,-18.797,paired,original,500,MATCH,"CI [-22.3,-15.1]"
+T2.RD true count,6.3,RD true count F1,30.9,30.919,runs/kg/defended_ragdefender-oraclen.jsonl,original,500,MATCH,
+T2.gain.RD true count,6.3,RD true count gain,-14.9,-14.935,paired,original,500,MATCH,"CI [-18.2,-11.8]"
+T2.rels,6.3,rels F1,54.4,54.41,runs/kg/defended_rels.jsonl,original,500,MATCH,
+T2.gain.rels,6.3,rels gain,8.6,8.557,paired,original,500,MATCH,"CI [+5.2,+11.6]"
+T2.learned@2%,6.3,learned@2% F1,61.1,61.109,runs/kg/defended_learned-dev_fpr0.02.jsonl,original,500,MATCH,
+T2.gain.learned@2%,6.3,learned@2% gain,15.3,15.256,paired,original,500,MATCH,"CI [+12.0,+18.4]"
+T3.adaptive 500 paper-det,6.4,adaptive 500 paper-det F1,54.9,54.925,runs/kg/defended_ad_learned-dev_fpr0.02.jsonl,original,500,MATCH,
+T3.gain.adaptive 500 paper-det,6.4,adaptive 500 paper-det gain,9.3,9.323,paired,original,500,MATCH,"CI [+6.1,+12.3]"
+T3.adaptive 500 mixed,6.4,adaptive 500 mixed F1,62.0,62.014,runs/kg/defended_ad_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02.jsonl,original,500,MATCH,
+T3.gain.adaptive 500 mixed,6.4,adaptive 500 mixed gain,16.4,16.412,paired,original,500,MATCH,"CI [+13.0,+19.6]"
+T3.adaptive 1328 paper-det,6.4,adaptive 1328 paper-det F1,55.1,55.079,runs/kg/defended_fullad_learned-dev_fpr0.02.jsonl,original,1328,MATCH,
+T3.gain.adaptive 1328 paper-det,6.4,adaptive 1328 paper-det gain,10.0,9.98,paired,original,1328,MATCH,"CI [+8.1,+11.9]"
+T3.adaptive 1328 mixed,6.4,adaptive 1328 mixed F1,60.7,60.664,runs/kg/defended_fullad_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02.jsonl,original,1328,MATCH,
+T3.gain.adaptive 1328 mixed,6.4,adaptive 1328 mixed gain,15.6,15.565,paired,original,1328,MATCH,"CI [+13.6,+17.6]"
+T3.evasive paper-det,6.4,evasive paper-det F1,50.1,50.129,runs/kg/defended_ev_learned-dev_fpr0.02.jsonl,original,500,MATCH,
+T3.gain.evasive paper-det,6.4,evasive paper-det gain,-1.4,-1.362,paired,original,500,MATCH,"CI [-4.6,+1.9]"
+T3.evasive mixed,6.4,evasive mixed F1,55.4,55.429,runs/kg/defended_ev_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02.jsonl,original,500,MATCH,
+T3.gain.evasive mixed,6.4,evasive mixed gain,3.9,3.939,paired,original,500,MATCH,"CI [+0.9,+6.9]"
+T3.evasive attack-aware,6.4,evasive attack-aware F1,60.0,60.03,runs/kg/defended_ev_learned-dev+K1_dev+K8_dev+ad_dev+ev_dev_fpr0.02.jsonl,original,500,MATCH,
+T3.gain.evasive attack-aware,6.4,evasive attack-aware gain,8.5,8.54,paired,original,500,MATCH,"CI [+5.4,+11.5]"
+T3.none.ad,6.4,none adaptive 45.6,45.6,45.602,,,500,MATCH,
+T3.none.ev,6.4,none evasive 51.5,51.5,51.49,,,500,MATCH,
+T4.A.clean,6.4,row A clean F1,61.6,61.59,runs/kg/defended_clean_crc-dev_a0.05.jsonl,original,500,MATCH,
+T4.A.cleanchange,6.4,row A clean change,-6.1,-6.069,paired,original,500,MATCH,"CI [-8.4,-3.9]"
+T4.A.paper,6.4,row A paper,60.7,60.664,runs/kg/defended_crc-dev_a0.05.jsonl,original,500,MATCH,
+T4.A.adaptive,6.4,row A adaptive,53.4,53.364,runs/kg/defended_ad_crc-dev_a0.05.jsonl,original,500,MATCH,
+T4.A.evasive,6.4,row A evasive,48.8,48.811,runs/kg/defended_ev_crc-dev_a0.05.jsonl,original,500,MATCH,
+T4.A.worst,6.4,row A worst case,48.8,48.811,row minimum,original,500,MATCH,
+T4.A.gain,6.4,row A worst-case gain,3.2,3.209,min defended - min undefended,original,500,MATCH,
+T4.A.planted,6.4,row A worst planted,24.8,24.808,max over attacks of a_precision,original,500,MATCH,
+T4.B.clean,6.4,row B clean F1,62.4,62.411,runs/kg/defended_clean_crc-dev+K1_dev+K8_dev+ad_dev_a0.05.jsonl,original,500,MATCH,
+T4.B.cleanchange,6.4,row B clean change,-5.3,-5.248,paired,original,500,ROUNDING,"CI [-7.4,-3.2]"
+T4.B.paper,6.4,row B paper,62.8,62.813,runs/kg/defended_crc-dev+K1_dev+K8_dev+ad_dev_a0.05.jsonl,original,500,MATCH,
+T4.B.adaptive,6.4,row B adaptive,62.2,62.188,runs/kg/defended_ad_crc-dev+K1_dev+K8_dev+ad_dev_a0.05.jsonl,original,500,MATCH,
+T4.B.evasive,6.4,row B evasive,52.4,52.4,runs/kg/defended_ev_crc-dev+K1_dev+K8_dev+ad_dev_a0.05.jsonl,original,500,MATCH,
+T4.B.worst,6.4,row B worst case,52.4,52.4,row minimum,original,500,MATCH,
+T4.B.gain,6.4,row B worst-case gain,6.8,6.799,min defended - min undefended,original,500,MATCH,
+T4.B.planted,6.4,row B worst planted,16.5,16.461,max over attacks of a_precision,original,500,MATCH,
+T4.C.clean,6.4,row C clean F1,67.0,66.966,runs/kg_strict/defended_clean_gatecrc-dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T4.C.cleanchange,6.4,row C clean change,-0.7,-0.693,paired,strict,500,MATCH,"CI [-1.7,+0.1]"
+T4.C.paper,6.4,row C paper,61.6,61.638,runs/kg_strict/defended_gatecrc-dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T4.C.adaptive,6.4,row C adaptive,49.1,49.096,runs/kg_strict/defended_ad_gatecrc-dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T4.C.evasive,6.4,row C evasive,50.7,50.655,runs/kg_strict/defended_ev_gatecrc-dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T4.C.worst,6.4,row C worst case,49.1,49.096,row minimum,strict,500,MATCH,
+T4.C.gain,6.4,row C worst-case gain,3.5,3.495,min defended - min undefended,strict,500,MATCH,
+T4.C.planted,6.4,row C worst planted,37.2,37.225,max over attacks of a_precision,strict,500,MATCH,
+T4.D.clean,6.4,row D clean F1,67.2,67.155,runs/kg_strict/defended_clean_gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T4.D.cleanchange,6.4,row D clean change,-0.5,-0.505,paired,strict,500,MATCH,"CI [-1.5,+0.3]"
+T4.D.paper,6.4,row D paper,60.8,60.767,runs/kg_strict/defended_gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T4.D.adaptive,6.4,row D adaptive,61.8,61.772,runs/kg_strict/defended_ad_gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T4.D.evasive,6.4,row D evasive,50.8,50.807,runs/kg_strict/defended_ev_gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T4.D.worst,6.4,row D worst case,50.8,50.807,row minimum,strict,500,MATCH,
+T4.D.gain,6.4,row D worst-case gain,5.2,5.205,min defended - min undefended,strict,500,MATCH,
+T4.D.planted,6.4,row D worst planted,25.4,25.406,max over attacks of a_precision,strict,500,MATCH,
+T4.E.clean,6.4,row E clean F1,61.7,61.738,runs/kg/defended_clean_learned-dev_fpr0.02.jsonl,original,500,MATCH,
+T4.E.cleanchange,6.4,row E clean change,-5.9,-5.921,paired,original,500,MATCH,"CI [-8.2,-3.8]"
+T4.E.paper,6.4,row E paper,61.1,61.109,runs/kg/defended_learned-dev_fpr0.02.jsonl,original,500,MATCH,
+T4.E.adaptive,6.4,row E adaptive,54.9,54.925,runs/kg/defended_ad_learned-dev_fpr0.02.jsonl,original,500,MATCH,
+T4.E.evasive,6.4,row E evasive,50.1,50.129,runs/kg/defended_ev_learned-dev_fpr0.02.jsonl,original,500,MATCH,
+T4.E.worst,6.4,row E worst case,50.1,50.129,row minimum,original,500,MATCH,
+T4.E.gain,6.4,row E worst-case gain,4.5,4.527,min defended - min undefended,original,500,MATCH,
+T4.E.planted,6.4,row E worst planted,16.7,16.719,max over attacks of a_precision,original,500,MATCH,
+T4.F.clean,6.4,row F clean F1,61.6,61.596,runs/kg/defended_clean_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02.jsonl,original,500,MATCH,
+T4.F.cleanchange,6.4,row F clean change,-6.1,-6.064,paired,original,500,MATCH,"CI [-8.3,-3.8]"
+T4.F.paper,6.4,row F paper,63.0,62.993,runs/kg/defended_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02.jsonl,original,500,MATCH,
+T4.F.adaptive,6.4,row F adaptive,62.0,62.014,runs/kg/defended_ad_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02.jsonl,original,500,MATCH,
+T4.F.evasive,6.4,row F evasive,55.4,55.429,runs/kg/defended_ev_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02.jsonl,original,500,MATCH,
+T4.F.worst,6.4,row F worst case,55.4,55.429,row minimum,original,500,MATCH,
+T4.F.gain,6.4,row F worst-case gain,9.8,9.827,min defended - min undefended,original,500,MATCH,
+T4.F.planted,6.4,row F worst planted,11.4,11.389,max over attacks of a_precision,original,500,MATCH,
+T4.G.clean,6.4,row G clean F1,67.5,67.541,runs/kg/defended_clean_gate-dev_fpr0.02_q0.05.jsonl,original,500,MATCH,
+T4.G.cleanchange,6.4,row G clean change,-0.1,-0.118,paired,original,500,MATCH,"CI [-1.1,+0.8]"
+T4.G.paper,6.4,row G paper,60.8,60.756,runs/kg/defended_gate-dev_fpr0.02_q0.05.jsonl,original,500,MATCH,
+T4.G.adaptive,6.4,row G adaptive,48.8,48.843,runs/kg/defended_ad_gate-dev_fpr0.02_q0.05.jsonl,original,500,MATCH,
+T4.G.evasive,6.4,row G evasive,52.4,52.418,runs/kg/defended_ev_gate-dev_fpr0.02_q0.05.jsonl,original,500,MATCH,
+T4.G.worst,6.4,row G worst case,48.8,48.843,row minimum,original,500,MATCH,
+T4.G.gain,6.4,row G worst-case gain,3.2,3.242,min defended - min undefended,original,500,MATCH,
+T4.G.planted,6.4,row G worst planted,34.7,34.741,max over attacks of a_precision,original,500,MATCH,
+T4.H.clean,6.4,row H clean F1,66.9,66.916,runs/kg/defended_clean_gate-dev+K1_dev+K8_dev+ad_dev_fpr0.02_q0.05.jsonl,original,500,MATCH,
+T4.H.cleanchange,6.4,row H clean change,-0.7,-0.744,paired,original,500,MATCH,"CI [-1.6,-0.1]"
+T4.H.paper,6.4,row H paper,62.1,62.062,runs/kg/defended_gate-dev+K1_dev+K8_dev+ad_dev_fpr0.02_q0.05.jsonl,original,500,MATCH,
+T4.H.adaptive,6.4,row H adaptive,61.8,61.755,runs/kg/defended_ad_gate-dev+K1_dev+K8_dev+ad_dev_fpr0.02_q0.05.jsonl,original,500,MATCH,
+T4.H.evasive,6.4,row H evasive,51.7,51.702,runs/kg/defended_ev_gate-dev+K1_dev+K8_dev+ad_dev_fpr0.02_q0.05.jsonl,original,500,MATCH,
+T4.H.worst,6.4,row H worst case,51.7,51.702,row minimum,original,500,MATCH,
+T4.H.gain,6.4,row H worst-case gain,6.1,6.1,min defended - min undefended,original,500,MATCH,
+T4.H.planted,6.4,row H worst planted,24.3,24.302,max over attacks of a_precision,original,500,MATCH,
+T4.none.planted,6.4,no defence worst planted 47.7,47.7,47.656,,,500,MATCH,
+T5.learned-dev_fpr0.02,6.5,clean learned-dev_fpr0.02,61.7,61.738,runs/kg/defended_clean_learned-dev_fpr0.02.jsonl,original,500,MATCH,
+T5.chg.learned-dev_fpr0.02,6.5,clean change learned-dev_fpr0.02,-5.9,-5.921,paired,,500,MATCH,"CI [-8.2,-3.8]"
+T5.crc-dev_a0.05,6.5,clean crc-dev_a0.05,61.6,61.59,runs/kg/defended_clean_crc-dev_a0.05.jsonl,original,500,MATCH,
+T5.chg.crc-dev_a0.05,6.5,clean change crc-dev_a0.05,-6.1,-6.069,paired,,500,MATCH,"CI [-8.4,-3.9]"
+T5.learned-dev,6.5,clean learned-dev,42.1,42.133,runs/kg/defended_clean_learned-dev.jsonl,original,500,MATCH,
+T5.chg.learned-dev,6.5,clean change learned-dev,-25.5,-25.526,paired,,500,MATCH,"CI [-29.0,-22.1]"
+T5.gate-dev_fpr0.02_q0.05,6.5,clean gate-dev_fpr0.02_q0.05,67.5,67.541,runs/kg/defended_clean_gate-dev_fpr0.02_q0.05.jsonl,original,500,MATCH,
+T5.chg.gate-dev_fpr0.02_q0.05,6.5,clean change gate-dev_fpr0.02_q0.05,-0.1,-0.118,paired,,500,MATCH,"CI [-1.1,+0.8]"
+T5.gatecrc-dev_a0.05_q0.05,6.5,clean gatecrc-dev_a0.05_q0.05,67.0,66.966,runs/kg_strict/defended_clean_gatecrc-dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T5.chg.gatecrc-dev_a0.05_q0.05,6.5,clean change gatecrc-dev_a0.05_q0.05,-0.7,-0.693,paired,,500,MATCH,"CI [-1.7,+0.1]"
+T5.gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05,6.5,clean gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05,67.2,67.155,runs/kg_strict/defended_clean_gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T5.chg.gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05,6.5,clean change gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05,-0.5,-0.505,paired,,500,MATCH,"CI [-1.5,+0.3]"
+T10.B.profile,6.10,row B profile F1,54.6,54.625,runs/kg/defended_fp_crc-dev+K1_dev+K8_dev+ad_dev_a0.05.jsonl,original,500,MATCH,
+T10.B.bridge,6.10,row B bridge F1,56.4,56.371,runs/kg/defended_fb_crc-dev+K1_dev+K8_dev+ad_dev_a0.05.jsonl,original,500,MATCH,
+T10.B.spread,6.10,row B spread F1,59.2,59.166,runs/kg/defended_fs_crc-dev+K1_dev+K8_dev+ad_dev_a0.05.jsonl,original,500,MATCH,
+T10.B.wcgain,6.10,row B held-out worst-case gain,11.6,11.258,min-minus-min,original,500,MISMATCH,"S1. basic-bootstrap CI [+8.2,+13.6]"
+T10.D.profile,6.10,row D profile F1,52.3,52.272,runs/kg_strict/defended_fp_gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T10.D.bridge,6.10,row D bridge F1,56.1,56.079,runs/kg_strict/defended_fb_gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T10.D.spread,6.10,row D spread F1,57.6,57.591,runs/kg_strict/defended_fs_gatecrc-dev+K1_dev+K8_dev+ad_dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T10.D.wcgain,6.10,row D held-out worst-case gain,8.9,8.906,min-minus-min,strict,500,MATCH,"S1. basic-bootstrap CI [+5.7,+11.2]"
+T10.C.profile,6.10,row C profile F1,52.9,52.904,runs/kg_strict/defended_fp_gatecrc-dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T10.C.bridge,6.10,row C bridge F1,56.3,56.314,runs/kg_strict/defended_fb_gatecrc-dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T10.C.spread,6.10,row C spread F1,57.6,57.563,runs/kg_strict/defended_fs_gatecrc-dev_a0.05_q0.05.jsonl,strict,500,MATCH,
+T10.C.wcgain,6.10,row C held-out worst-case gain,9.5,9.537,min-minus-min,strict,500,MATCH,"S1. basic-bootstrap CI [+6.5,+11.6]"
+T10.none.worst,6.10,no-defence worst 43.4,43.4,43.366,,,500,MATCH,
+T10.oracle.profile,6.10,strict oracle profile,65.4,65.419,,strict,500,MATCH,
+T10.oracle.bridge,6.10,strict oracle bridge,66.0,66.044,,strict,500,MATCH,
+T10.oracle.spread,6.10,strict oracle spread,65.7,65.74,,strict,500,MATCH,
+T10.none.profile,6.10,none profile,45.8,45.781,,,500,MATCH,
+T10.none.bridge,6.10,none bridge,43.5,43.474,,,500,MATCH,
+T10.none.spread,6.10,none spread,43.4,43.366,,,500,MATCH,
+T11.B.gain,6.10,six-attack worst-case gain row B,9.0,9.034,min-minus-min,original,500,MATCH,"basic CI [+5.7,+11.8]"
+T11.B.planted,6.10,six-attack worst planted row B,22.7,22.652,,,500,MATCH,
+T11.B.worstF1,6.10,six-attack worst F1 row B,52.4,52.4,,,500,MATCH,
+T11.C.gain,6.10,six-attack worst-case gain row C,5.7,5.73,min-minus-min,strict,500,MATCH,"basic CI [+3.3,+7.5]"
+T11.C.planted,6.10,six-attack worst planted row C,37.2,37.225,,,500,MATCH,
+T11.C.worstF1,6.10,six-attack worst F1 row C,49.1,49.096,,,500,MATCH,
+T11.D.gain,6.10,six-attack worst-case gain row D,7.4,7.44,min-minus-min,strict,500,MATCH,"basic CI [+4.5,+9.9]"
+T11.D.planted,6.10,six-attack worst planted row D,29.8,29.782,,,500,MATCH,
+T11.D.worstF1,6.10,six-attack worst F1 row D,50.8,50.807,,,500,MATCH,
+T11.none.worstplanted,6.10,no-defence worst planted 50.7,50.7,50.673,,,500,MATCH,
+T11.none.worst,6.10,no-defence worst 43.4,43.4,43.366,,,500,MATCH,
+T9.none.f1,6.9,b8 none F1,42.1,42.064,runs/kg/defended_b8_none.jsonl,original,500,MATCH,
+T9.none.hit,6.9,b8 none Hit,75.0,75.0,,,500,MATCH,
+T9.learned-dev_fpr0.02.f1,6.9,b8 learned-dev_fpr0.02 F1,57.9,57.938,runs/kg/defended_b8_learned-dev_fpr0.02.jsonl,original,500,MATCH,
+T9.learned-dev_fpr0.02.hit,6.9,b8 learned-dev_fpr0.02 Hit,80.2,80.2,,,500,MATCH,
+T9.crc-dev_a0.05.f1,6.9,b8 crc-dev_a0.05 F1,60.0,59.962,runs/kg/defended_b8_crc-dev_a0.05.jsonl,original,500,MATCH,
+T9.crc-dev_a0.05.hit,6.9,b8 crc-dev_a0.05 Hit,80.2,80.2,,,500,MATCH,
+T9.oracle.f1,6.9,b8 oracle F1,64.4,64.448,runs/kg/defended_b8_oracle.jsonl,original,500,MATCH,
+T9.oracle.hit,6.9,b8 oracle Hit,81.2,81.2,,,500,MATCH,
+T9.gain.learned-dev_fpr0.02,6.9,b8 gain learned-dev_fpr0.02,15.9,15.874,,original,500,MATCH,"CI [+12.9,+19.0]"
+T9.gain.crc-dev_a0.05,6.9,b8 gain crc-dev_a0.05,17.9,17.898,,original,500,MATCH,"CI [+14.5,+21.0]"
+T9.gain.oracle,6.9,b8 gain oracle,22.4,22.384,,original,500,MATCH,"CI [+18.6,+25.9]"
+T12.mg.clean,6.12,MultiGraph clean,74.6,74.628,runs/kg_mg,strict,500,MATCH,
+T12.mg.none,6.12,MultiGraph none,42.0,42.015,runs/kg_mg,strict,500,MATCH,
+T12.mg.oracle,6.12,MultiGraph oracle,74.6,74.628,runs/kg_mg,strict,500,MATCH,
+T12.mg.D,6.12,MultiGraph D,66.1,66.061,runs/kg_mg,strict,500,MATCH,
+T12.mg.Dclean,6.12,MultiGraph Dclean,74.4,74.429,runs/kg_mg,strict,500,MATCH,
+T12.sg.clean,6.12,simple graph clean,67.7,67.66,,,500,MATCH,
+T12.sg.none,6.12,simple graph none,45.9,45.853,,,500,MATCH,
+T12.sg.oracle,6.12,simple graph strict oracle 65.4,65.4,65.419,,strict,500,MATCH,
+T12.sg.D,6.12,simple graph D 60.8,60.8,60.767,,strict,500,MATCH,
+T12.sg.Dclean,6.12,simple graph D clean 67.2,67.2,67.155,,strict,500,MATCH,
+T12.mg.attack,6.12,MG attack -32.6,32.6,32.613,,,500,MATCH,
+T12.sg.attack,6.12,simple attack -21.8,21.8,21.806,,,500,MATCH,
+T12.mg.Dgain,6.12,MG D gain +24.0,24.0,24.046,,strict,500,MATCH,"CI [+20.9,+27.2] paper [+20.9,+27.2]"
+T12.mg.orgain,6.12,MG oracle gain +32.6,32.6,32.613,,strict,500,MATCH,"CI [+29.7,+35.4] paper [+29.5,+35.8]"
+T12.mg.share,6.12,MG D share ~74%,74,73.731,,strict,500,MATCH,
+T12.hit-sg,6.12,hit-sg,83.2,83.2,,,500,MATCH,
+T12.hit-mg,6.12,hit-mg,88.6,88.6,,,500,MATCH,
+T12.prec-sg,6.12,prec-sg,77.0,76.969,,,500,MATCH,
+T12.prec-mg,6.12,prec-mg,80.9,80.881,,,500,MATCH,
+T12.rec-sg,6.12,rec-sg,72.8,72.819,,,500,MATCH,
+T12.rec-mg,6.12,rec-mg,80.0,79.97,,,500,MATCH,
+T13.paper none.4bit,6.13,paper none 4-bit,45.3,45.262,runs/kg/defended_full_none.jsonl,original,1328,MATCH,
+T13.paper none.bf16,6.13,paper none bf16,46.1,46.087,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.paper none.diff,6.13,paper none diff,0.8,0.825,paired,original,1328,MATCH,"CI [+0.0,+1.7]"
+T13.paper oracle.4bit,6.13,paper oracle 4-bit,65.5,65.464,runs/kg/defended_full_oracle.jsonl,original,1328,MATCH,
+T13.paper oracle.bf16,6.13,paper oracle bf16,66.3,66.276,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.paper oracle.diff,6.13,paper oracle diff,0.8,0.812,paired,original,1328,MATCH,"CI [+0.1,+1.6]"
+T13.paper conformal.4bit,6.13,paper conformal 4-bit,60.3,60.289,runs/kg/defended_full_crc-dev_a0.05.jsonl,original,1328,MATCH,
+T13.paper conformal.bf16,6.13,paper conformal bf16,60.8,60.829,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.paper conformal.diff,6.13,paper conformal diff,0.5,0.54,paired,original,1328,MATCH,"CI [-0.2,+1.3]"
+T13.paper learned2.4bit,6.13,paper learned2 4-bit,61.2,61.158,runs/kg/defended_full_learned-dev_fpr0.02.jsonl,original,1328,MATCH,
+T13.paper learned2.bf16,6.13,paper learned2 bf16,62.1,62.091,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.paper learned2.diff,6.13,paper learned2 diff,0.9,0.932,paired,original,1328,MATCH,"CI [+0.1,+1.8]"
+T13.paper rels.4bit,6.13,paper rels 4-bit,54.4,54.389,runs/kg/defended_full_rels.jsonl,original,1328,MATCH,
+T13.paper rels.bf16,6.13,paper rels bf16,55.4,55.403,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.paper rels.diff,6.13,paper rels diff,1.0,1.014,paired,original,1328,MATCH,"CI [+0.2,+1.9]"
+T13.ad none.4bit,6.13,ad none 4-bit,45.1,45.099,runs/kg/defended_fullad_none.jsonl,original,1328,MATCH,
+T13.ad none.bf16,6.13,ad none bf16,46.2,46.2,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ad none.diff,6.13,ad none diff,1.1,1.101,paired,original,1328,MATCH,"CI [+0.3,+2.0]"
+T13.ad oracle.4bit,6.13,ad oracle 4-bit,65.6,65.626,runs/kg/defended_fullad_oracle.jsonl,original,1328,MATCH,
+T13.ad oracle.bf16,6.13,ad oracle bf16,66.3,66.327,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ad oracle.diff,6.13,ad oracle diff,0.7,0.701,paired,original,1328,MATCH,"CI [-0.0,+1.4]"
+T13.ad mixed.4bit,6.13,ad mixed 4-bit,60.7,60.664,runs/kg/defended_fullad_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02.jsonl,original,1328,MATCH,
+T13.ad mixed.bf16,6.13,ad mixed bf16,60.8,60.828,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ad mixed.diff,6.13,ad mixed diff,0.2,0.164,paired,original,1328,MATCH,"CI [-0.8,+1.1]"
+T13.ad paper.4bit,6.13,ad paper 4-bit,55.1,55.079,runs/kg/defended_fullad_learned-dev_fpr0.02.jsonl,original,1328,MATCH,
+T13.ad paper.bf16,6.13,ad paper bf16,55.9,55.877,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ad paper.diff,6.13,ad paper diff,0.8,0.798,paired,original,1328,MATCH,"CI [-0.1,+1.8]"
+T13.ev.fullev_none,6.13,bf16 evasive fullev_none,51.2,51.195,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ev.fullev_oracle,6.13,bf16 evasive fullev_oracle,66.5,66.537,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ev.fullev_learned-dev_fpr0.02,6.13,bf16 evasive fullev_learned-dev_fpr0.02,49.0,49.029,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ev.fullev_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02,6.13,bf16 evasive fullev_learned-dev+K1_dev+K8_dev+ad_dev_fpr0.02,51.1,51.142,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ev.fullev_learned-dev+K1_dev+K8_dev+ad_dev+ev_dev_fpr0.02,6.13,bf16 evasive fullev_learned-dev+K1_dev+K8_dev+ad_dev+ev_dev_fpr0.02,58.4,58.398,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ev.fullev_crc-dev+K1_dev+K8_dev+ad_dev_a0.05,6.13,bf16 evasive fullev_crc-dev+K1_dev+K8_dev+ad_dev_a0.05,50.4,50.396,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.ev.fullev_crc-dev+K1_dev+K8_dev+ad_dev+ev_dev_a0.05,6.13,bf16 evasive fullev_crc-dev+K1_dev+K8_dev+ad_dev+ev_dev_a0.05,58.2,58.157,hpc_results/T1_unpacked,original,1328,MATCH,
+T13.crcgain.bf16,6.13,conformal gain bf16 +14.7,14.7,14.742,,original,1328,MATCH,
+T13.crcgain.4bit,6.13,conformal gain 4-bit +15.0,15.0,15.027,,original,1328,MATCH,
+S15.seed,6.6,seed gain,15.3,15.256,"learned@2% paper detector, WebQSP-500",original,500,MATCH,
+S15.seed,6.6,seed gain,15.8,15.845,"learned@2% paper detector, WebQSP-500",original,500,MATCH,
+S15.seed,6.6,seed gain,14.4,14.354,"learned@2% paper detector, WebQSP-500",original,500,MATCH,
+S15.seed,6.6,seed gain,16.1,16.096,"learned@2% paper detector, WebQSP-500",original,500,MATCH,
+S15.seed,6.6,seed gain,15.6,15.602,"learned@2% paper detector, WebQSP-500",original,500,MATCH,
+S15.mean,6.6,seed mean 15.4,15.4,15.431,,original,500,MATCH,
+S15.sd,6.6,seed sd 0.7,0.7,0.677,sample sd,original,500,MATCH,
+66.qwen.paper,6.6,Qwen gain +10.6,10.6,11.221,,original,500,MISMATCH,"CI [+7.9,+14.4] paper [+6.6,+14.4]"
+66.qwen.ad,6.6,Qwen adaptive gain +9.1,9.1,9.387,,original,500,MISMATCH,"CI [+6.2,+12.7] paper [+5.2,+12.9]"
+66.qwen.planted,6.6,Qwen planted 32.0%,32.0,32.027,,,500,MATCH,
+ABS.em,abstract,exact match falls 58%,58,57.674,T1.EM entries,,500,MATCH,relative EM drop
+ABS.share.web,abstract,recovers 73% of the gain of a perfect filter (WebQSP),73,73.178,T1.share.crc.web,strict/strict,1328,MATCH,"configuration A (always-on conformal, paper detector), NOT the recommended D"
+ABS.share.cwq,abstract,60% (CWQ),60,60.23,T1.share.crc.cwq,strict/strict,3231,MATCH,configuration A
+ABS.rd,abstract,RAGDefender lowers F1 by 12-19 points,12,11.9,T2,original,500,MATCH,range 11.9 to 18.8 rounds to 12-19
+ABS.Dclean,abstract,"gate clean cost -0.5 [-1.5, +0.4]",-0.5,-0.505,kg_strict/defended_clean_gatecrc-MIX,strict,500,MATCH,"CI recomputed [-1.5,+0.3] vs paper [-1.5,+0.4]"
+ABS.D.worst,abstract,worst-case F1 50.8,50.8,50.807,min over six attacks of D,strict,500,MATCH,
+ABS.none.worst,abstract,43.4,43.4,43.366,,,500,MATCH,
+ABS.unseen.lo,abstract,unseen families 33%,33,33.056,,strict,500,ROUNDING,
+ABS.unseen.hi,abstract,unseen families 64%,64,63.577,,strict,500,ROUNDING,
+ABS.known.lo,abstract,76% (paper),76,76.222,,strict,500,ROUNDING,
+ABS.known.hi,abstract,82% (adaptive),82,81.599,,strict,500,ROUNDING,
+FIG7.evasive.share,fig 7,evasive share -5%,-5,-4.595,,strict,500,MATCH,
+ABS.bf16.max,abstract,bf16 within 1.1 F1,1.1,1.1,T13 diffs (max 1.1: adaptive no defence),original,1328,MATCH,"applies to the nine rows of Table 13 only; the evasive bf16 rows have no 4-bit 1,328 counterpart"
+611.cwq.gate,6.11,"CWQ gate +7.7 [+6.4, +9.1]",7.7,7.733,defended_cwqfull_gatecrc-dev,original,3231,MATCH,"CI [+6.2,+9.1]"
+611.cwq.crc,6.11,"CWQ always-on conformal +8.0 [+6.6, +9.4]",8.0,8.034,,original,3231,MATCH,"CI [+6.5,+9.4]"
+611.cwq.oracle,6.11,"CWQ oracle +11.4 [+9.8, +13.0]",11.4,11.37,,original,3231,MATCH,"CI [+9.8,+12.9]"
+611.cwq.planted,6.11,17.7% planted,17.7,17.702,,original,3231,MATCH,
+611.cwq.clean,6.11,"CWQ clean cost -1.3 [-1.8, -0.8]",-1.3,-1.348,,original,3231,MATCH,"CI [-1.9,-0.9]"
+611.cwq.clean48.8,6.11,48.8 clean through path pipeline,48.8,48.827,,,3231,MATCH,
+611.cwq.clean47.5,6.11,47.5 with gate,47.5,47.48,,,3231,MATCH,
+611.kge.paper,6.11,"TransE feature, with minus without, paper",0.4,0.414,kge vs non-kge gatecrc MIX,original,500,MATCH,"CI [-1.2,+2.1]"
+611.kge.evasive,6.11,"TransE feature, with minus without, evasive",0.1,0.09,kge vs non-kge gatecrc MIX,original,500,MATCH,"CI [-2.1,+2.5]"
+611.kge.profile,6.11,"TransE feature, with minus without, profile",1.8,1.808,kge vs non-kge gatecrc MIX,original,500,MATCH,"CI [+0.1,+3.5]"
+611.kge.bridge,6.11,"TransE feature, with minus without, bridge",4.0,4.028,kge vs non-kge gatecrc MIX,original,500,MATCH,"CI [+2.2,+6.0]"
+611.kge.spread,6.11,"TransE feature, with minus without, spread",0.9,0.869,kge vs non-kge gatecrc MIX,original,500,MATCH,"CI [-0.9,+2.7]"
+611.kge.clean,6.11,TransE feature clean -0.1,-0.1,-0.092,,original,500,MATCH,
+69.share.crc,6.9,conformal 80.0% of oracle gain,80.0,79.958,,original,500,MATCH,"CI recomputed [69.8, 91.6] vs paper [69.9, 90.7]"
+69.share.l2,6.9,2% 70.9% of oracle gain,70.9,70.917,,original,500,MATCH,
+610.B.share.profile,6.10,always-on B share profile,45,45.036,,MIXED: original B / strict oracle,500,MATCH,
+610.B.share.bridge,6.10,always-on B share bridge,57,57.143,,MIXED: original B / strict oracle,500,MATCH,
+610.B.share.spread,6.10,always-on B share spread,71,70.619,,MIXED: original B / strict oracle,500,MATCH,
+65.t2.A.0,6.5,row A setting 0,60.7,60.664,,original,500,MATCH,
+65.t2.A.1,6.5,row A setting 1,53.4,53.364,,original,500,MATCH,
+65.t2.A.2,6.5,row A setting 2,48.8,48.811,,original,500,MATCH,
+65.t2.A.3,6.5,row A setting 3,61.6,61.59,,original,500,MATCH,
+65.t2.C.0,6.5,row C setting 0,61.6,61.638,,strict,500,MATCH,
+65.t2.C.1,6.5,row C setting 1,49.1,49.096,,strict,500,MATCH,
+65.t2.C.2,6.5,row C setting 2,50.7,50.655,,strict,500,MATCH,
+65.t2.C.3,6.5,row C setting 3,67.0,66.966,,strict,500,MATCH,
+65.t2.D.0,6.5,row D setting 0,60.8,60.767,,strict,500,MATCH,
+65.t2.D.1,6.5,row D setting 1,61.8,61.772,,strict,500,MATCH,
+65.t2.D.2,6.5,row D setting 2,50.8,50.807,,strict,500,MATCH,
+65.t2.D.3,6.5,row D setting 3,67.2,67.155,,strict,500,MATCH,
+610.DminusC.known,6.10,D minus C worst case known,1.7,1.711,,strict,500,MATCH,
+610.DminusC.heldout,6.10,D minus C worst case heldout,-0.6,-0.632,,strict,500,MATCH,
+T7.hit.clean,6.8,GCR 400 clean hit,82.0,82.0,gcr2s2_clean_400,strict,400,MATCH,
+T7.hit.att,6.8,GCR 400 attacked hit,81.2,81.25,gcr2s2_poisoned_400,strict,400,MATCH,
+T7.f1.clean,6.8,GCR 400 clean f1,65.2,65.208,gcr2s2_clean_400,strict,400,MATCH,
+T7.f1.att,6.8,GCR 400 attacked f1,60.7,60.686,gcr2s2_poisoned_400,strict,400,MATCH,
+T7.top1,6.8,GCR 400 planted top-1 3.2%,3.2,3.25,,,400,MATCH,
+GCR.dmg,6.8,attack costs 4.8 F1 (500 q),4.8,4.8,scripts/gcr_decompose_500.py (output reproduced in this audit),strict,500,MATCH,
+GCR.reach,6.8,oracle recovers 2.4,2.4,2.4,scripts/gcr_decompose_500.py (output reproduced in this audit),strict,500,MATCH,
+GCR.47,6.8,47 of 500 questions,47,47.0,scripts/gcr_decompose_500.py (output reproduced in this audit),strict,500,MATCH,
+GCR.61,6.8,61 of 65 lost paths,61,61.0,scripts/gcr_decompose_500.py (output reproduced in this audit),strict,500,MATCH,
+GCR.23.7,6.8,23.7 F1 loss,23.7,23.7,scripts/gcr_decompose_500.py (output reproduced in this audit),strict,500,MATCH,
+GCR.paths,6.8,7.3 beam paths/question,7.3,7.314,runs/kg_strict/paths_gcrtest.jsonl,strict,1328,MATCH,
+GCR.poisoned,6.8,5.7% of beam paths poisoned,5.7,5.12,review/gcr_label.py,strict,1328,MISMATCH,paper value does not reproduce; corrected to 5.1%
+GCR.auc,6.8,path-level AUC 0.785,0.785,0.766,review/batch5.py,strict,1328,MISMATCH,corrected to 0.77; RoG-side comparison 0.963
+GCR.198,6.8,198 of 1328 questions with a poisoned beam path,198,198.0,,strict,1328,MATCH,
+S21.lost19,4,about 19% of questions lose all gold evidence at 10% FPR,19,18.1,review/batch5b.py,original (strict: 20.5),414,MATCH,paper figure lies between the original-label (18.1) and strict-label (20.5) values; text now gives both
+S21.q.auc.adaptive,6.4,question-level AUC adaptive 0.81,0.81,0.803,review/batch5b.py,original,500,ROUNDING,corrected to 0.80
+S21.q.auc.evasive,6.4,question-level AUC evasive 0.73,0.73,0.732,review/batch5b.py,original,500,MATCH,
+S21.q.auc.paper,6.4,question-level AUC paper 0.95,0.95,0.954,review/batch5b.py,original,500,MATCH,
+S21.rels.auc,6.3,rels path-level AUC 0.80,0.8,0.801,review/batch5b.py,original,500,MATCH,
+S21.rels.auc.ad,6.3,rels adaptive AUC 0.27,0.27,0.265,review/batch5b.py,original,500,MATCH,
+S21.ppl,6.3,perplexity AUC 0.54,0.54,0.539,review/batch5b.py,original,500,MATCH,
+S21.verify,6.3,self-check AUC 0.50,0.5,0.503,review/batch5.py,strict,500,MATCH,
+S21.kge.auc,6.3,TransE held-out AUC 0.90,0.9,0.903,runs/kge_train.log,n/a,0,MATCH,
+S21.kge.paths,6.3,TransE path AUC 0.39-0.42,0.39,0.394,review/batch5.py,strict,500,MATCH,regenerated 0.414 / 0.414 / 0.394
+S21.rd.conc.p,6.3,RAGDefender removed poisoned 47.5%,47.5,47.5,review/rd.py,original,100,MATCH,
+S21.rd.conc.c,6.3,RAGDefender removed clean 46.3%,46.3,46.3,review/rd.py,original,100,MATCH,
+S21.rd.true.p,6.3,true-count removed poisoned 65%,65,65.4,review/rd.py,original,100,MATCH,
+S21.rd.true.c,6.3,true-count removed clean 17%,17,17.4,review/rd.py,original,100,MATCH,
+S21.heldout.auc.profile,6.10,mixed detector AUC profile 0.89,0.89,0.889,review/batch5b.py,original,500,MATCH,strict 0.899
+S21.heldout.auc.bridge,6.10,AUC bridge 0.88,0.88,0.877,review/batch5b.py,original,500,MATCH,strict 0.894
+S21.heldout.auc.spread,6.10,AUC spread 0.94,0.94,0.942,review/batch5b.py,original,500,MATCH,strict 0.953
+S21.828,4,828 other questions same 61.2 F1,61.2,61.19,review/t13.py,original,828,MATCH,
+S9.166,5,"0.94% of paths relabelled (166 of 17,703)",0.94,0.938,paths_test loose 5547 vs strict 5381,,500,MATCH,
+F2.62,5,oracle-kept path set differs from clean in N of 500 questions,78,62.0,review (inline),strict,500,MISMATCH,paper text had 78 / 55.6 / 69.8 / 59 (original-label run); strict values are 62 / 63.4 / 81.3 / 53 and the text now says so
+S16.risk,6.7,realised risk 0.045 at alpha 0.05,0.045,0.045,review/crc_simulation_rerun.txt,strict,100,MATCH,reproduced exactly
+QWEN.paper.orig,6.6,"Qwen reasoner gain +10.6 [+6.6,+14.4] (paper before audit)",10.6,11.221,runs/kg/defended_*_r-Qwen2.5-7B-Instruct.jsonl,original,500,MISMATCH,"regenerated +11.2 [+7.9,+14.4]; paper text corrected (S15)"
+QWEN.ad.orig,6.6,"Qwen adaptive gain +9.1 [+5.2,+12.9] (before audit)",9.1,9.387,runs/kg/defended_ad_*_r-Qwen2.5-7B-Instruct.jsonl,original,500,MISMATCH,"regenerated +9.4 [+6.2,+12.7]; corrected"
+T10.B.wcgain.orig,6.10,"held-out worst-case gain row B +11.6 [+8.9,+14.4] (before audit)",11.6,11.258,"runs/kg/defended_{fp,fb,fs}_crc-MIX_a0.05.jsonl",original,500,MISMATCH,"S1: percentile-bootstrap mean; corrected to +11.3 [+8.2,+13.6]"
+T11.B.ci.orig,6.10,"six-attack row B CI [+6.2,+12.3] (before audit)",6.2,5.7,"same files, six attacks",original,500,MISMATCH,"point estimate +9.0 was right; basic-bootstrap interval is [+5.7,+11.8]"
+ORACLE.gap.orig,5,78 of 500 questions; oracle 55.6 vs clean 69.8; 59 of 78 overwritten (before audit),78,62,kg/paths_*test + defended_oracle*,original-label numbers quoted for a strict-label oracle,500,MISMATCH,strict: 62 / 63.4 / 81.3 / 53
+SIM.ncal,6.7,mixed-detector calibration n in the CRC bound,682,170,runs/queue_stage25.log '[crc] ... cal_answerable_q=682',strict,682,MISMATCH,682 rows are four attack versions of about 170 distinct questions
+ZHAO.T3,6.1,"Zhao et al. Table 3 values quoted (RoG WebQSP 70.34->38.06, EM 45.76->8.85, Hits@1 79.61->48.46, Hit 85.87->75.61; GCR 71.07/78.50/44.29, -10%/-12%/-22%)",1,1,papers/01_priority_core/KG-RAG security track/2026_Exploring_Knowledge_Poisoning_Attacks_to_RAG_RAG_Safety.pdf Table 3,external,0,MATCH,all values found in the published-version PDF
+PLANTED.gold,3,wrong answers that coincide with gold answers (not previously stated),0,13.4,kg_strict/paths_test.jsonl (adv vs gold),n/a,500,MISMATCH,now disclosed (S27)
+CWQ.gate.flag,4/6.11,CWQ gate (detector C): share of clean CWQ questions flagged (target 5%),5.0,9.3,review/s6b.py,original,2752,MISMATCH,target 5% on clean development questions; 9.3% on clean CWQ test
+GATE.flag.C,4,"gate flags at most 5% of clean questions (C, clean WebQSP-500 test)",5.0,6.8,review/s6.py,strict,483,MISMATCH,text corrected
+GATE.flag.D,4,"gate flags at most 5% of clean questions (D, clean WebQSP-500 test)",5.0,6.4,review/s6.py,strict,483,MISMATCH,text corrected
+GCR.gate.flag,6.8,GCR gate D flagged share (attacked),5.6,5.6,runs/queue_stage25.log '[gate] qfpr=0.05 ... flagged',strict,1328,MATCH,2.4% of the 500 clean questions
+REAL.RISK.1328,6.7,realised conformal risk of the paper-attack threshold on WebQSP-1328 (target 0.05),0.05,0.077,review/single_split_rerun.txt,strict,1104,MISMATCH,0.077 (WebQSP-1328) and 0.071 (CWQ); not previously stated; now in 6.7 and the limitations

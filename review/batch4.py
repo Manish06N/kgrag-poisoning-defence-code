@@ -1,0 +1,18 @@
+import sys; sys.path.insert(0,"review")
+from lib import *
+a=L(S+"defended_oracle_fpr0.02.jsonl"); b=L(S+"defended_ad_oracle_fpr0.02.jsonl"); c=L(S+"defended_fp_oracle_fpr0.02.jsonl")
+print("oracle strict paper/ad/profile means", mean(a), mean(b), mean(c), "q equal paper-ad", sum(a[i]['f1']==b[i]['f1'] for i in a), "paper-profile", sum(a[i]['f1']==c[i]['f1'] for i in a))
+print("== S17 MultiGraph")
+cl=L(M+"defended_clean_none_fpr0.02.jsonl"); no=L(M+"defended_none_fpr0.02.jsonl"); orc=L(M+"defended_oracle_fpr0.02.jsonl")
+D=L(M+f"defended_gatecrc-{MIX}_a0.05_q0.05.jsonl"); Dc=L(M+f"defended_clean_gatecrc-{MIX}_a0.05_q0.05.jsonl")
+for nm,r in (("clean",cl),("none",no),("oracle",orc),("D",D),("D clean",Dc)): print(nm,len(r),round(mean(r),2),"hit",round(mean(r,'hit'),1),"prec",round(mean(r,'precision'),1),"rec",round(mean(r,'recall'),1))
+print("oracle vs clean identical f1 per q:", sum(abs(orc[i]['f1']-cl[i]['f1'])<1e-12 for i in cl), "of", len(cl), "| identical predictions:", sum(orc[i]['prediction']==cl[i]['prediction'] for i in cl), " n_paths equal:", sum(orc[i]['n_kept']==cl[i]['n_paths'] for i in cl))
+print("D gain", fmt(paired(D,no)), "oracle gain", fmt(paired(orc,no)), "D clean", fmt(paired(Dc,cl)))
+sc=L(K+"defended_clean_none.jsonl"); ns=L(K+"defended_none.jsonl"); osim=L(S+"defended_oracle_fpr0.02.jsonl")
+for nm,r in (("simple clean",sc),("simple none",ns),("simple oracleS",osim)): print(nm,round(mean(r),2),"hit",round(mean(r,'hit'),1),"prec",round(mean(r,'precision'),1),"rec",round(mean(r,'recall'),1))
+print("simple oracle vs clean: identical f1", sum(abs(osim[i]['f1']-sc[i]['f1'])<1e-12 for i in sc), "differs", sum(abs(osim[i]['f1']-sc[i]['f1'])>1e-12 for i in sc))
+print("== S19/GCR 400 files")
+for f in ["gcr2s2_clean_400","gcr2s2_poisoned_400"]:
+    r=L(K+f+".jsonl"); print(f,len(r),round(mean(r),1), "first id",sorted(r)[0], "last", sorted(r)[-1])
+c4=L(K+"gcr2s2_clean_400.jsonl"); p4=L(K+"gcr2s2_poisoned_400.jsonl")
+print("GCR400 change f1", fmt(paired(p4,c4)), "hit",fmt(paired(p4,c4,'hit')), "planted top1", round(mean(p4,'a_hit1'),1))

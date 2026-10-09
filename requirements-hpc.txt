@@ -1,0 +1,20 @@
+# Versions used for the local results (Python 3.14.3, Windows 11, RTX-class 16 GB GPU, CUDA 12.8 wheels).
+# On the cluster use the Python your site provides (3.10-3.12 is fine); loosen pins only if resolution fails and record what you used.
+torch>=2.5          # local: 2.11.0+cu128; install the wheel matching the cluster CUDA
+transformers==4.57.6   # group beam search (used by GCR) is still in core here; newer majors may move it out
+accelerate>=1.0
+bitsandbytes>=0.45  # only needed for 4-bit runs; full-precision runs on the cluster do not need it
+sentencepiece       # RoG tokenizer (use_fast=False)
+protobuf
+huggingface_hub>=0.30
+datasets>=3.0
+sentence-transformers>=3.0
+scikit-learn>=1.5
+numpy
+pandas
+pyarrow
+networkx>=3.0
+rapidfuzz>=3.0
+marisa-trie         # GCR prefix trie
+tqdm
+pytest
