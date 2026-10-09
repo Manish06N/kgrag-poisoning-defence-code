@@ -520,17 +520,10 @@ The authors declare that they have no known competing financial interests or per
 This research received no funding.
 
 \section*{Data availability}
-The benchmarks (WebQSP and CWQ) and the models (RoG, GCR, Qwen2.5-7B-Instruct) are public. The attack and defence code, the poisoned-graph generators and the per-question result files will be released publicly on acceptance and are available from the corresponding author on request.
+The benchmarks (WebQSP and CWQ) and the models (RoG, GCR, Qwen2.5-7B-Instruct) are public. The attack and defence code, the poisoned-graph generators, the per-question result files and the scripts that regenerate every table are publicly available at \url{https://github.com/Manish06N/kgrag-poisoning-defence-code} (MIT licence).
 
 \section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
 During the preparation of this work the authors used Claude (Anthropic) for code and text drafting. The authors reviewed and edited all content and take full responsibility for the content of the published article.
-
-\appendix
-\section{Reproducibility}\label{app:repro}
-\begin{sloppypar}
-Code and run files are in the private repository \texttt{Manish06N/kgrag-poisoning-defence}. Tables are regenerated with \texttt{python -m kgrag.report}; the review checks with \texttt{scripts/review\_checks.py} and \texttt{scripts/gcr\_rescore.py}. Local runs used a 16~GB GPU, 4-bit nf4 weights and transformers 4.57.6. HPC (bf16) runs write to \texttt{runs/kg\_bf16/} via the environment variable \texttt{KG\_RUNS}. HPC reproduction check (job T0, 50 clean WebQSP questions): 4-bit F1 69.0, identical to the laptop run; bf16 F1 66.4 (9 of 50 predictions differ, too few to say whether this is noise); full-set (1,328 question) bf16 results are in Section~\ref{sec:bf16} (archive \texttt{results\_bf16\_T1\_2026-10-09.tar.gz}, SHA-256 prefix f0fb13733cae1b71). Strict-label reruns write to \texttt{runs/kg\_strict/} and the MultiGraph ablation to \texttt{runs/kg\_mg/} via \texttt{KG\_RUNS}; \texttt{scripts/gcr\_defence\_report.py} regenerates the GCR table and \texttt{scripts/make\_figures.py} the data figures.
-
-\end{sloppypar}
 
 \begin{thebibliography}{99}\small
 \bibitem{zhao2025} T.~Zhao, J.~Chen, Y.~Ru, H.~Zhu, N.~Hu, J.~Liu, and Q.~Lin. Exploring knowledge poisoning attacks to retrieval-augmented generation. \emph{Information Fusion}, 127:103900, 2026, doi:10.1016/j.inffus.2025.103900 (arXiv:2507.08862, first titled ``RAG Safety: Exploring Knowledge Poisoning Attacks to Retrieval-Augmented Generation'').
@@ -565,5 +558,13 @@ Code and run files are in the private repository \texttt{Manish06N/kgrag-poisoni
 \bibitem{angelopoulos2024} A.~N. Angelopoulos, S.~Bates, A.~Fisch, L.~Lei, and T.~Schuster. Conformal Risk Control. In \emph{ICLR}, 2024. arXiv:2208.02814.
 \bibitem{angelopoulos2021} A.~N. Angelopoulos, S.~Bates, E.~J. Cand\`es, M.~I. Jordan, and L.~Lei. Learn then Test: Calibrating Predictive Algorithms to Achieve Risk Control. \emph{The Annals of Applied Statistics}, 19:1641--1662, 2025, doi:10.1214/24-AOAS1998 (arXiv:2110.01052).
 \end{thebibliography}
+
+\appendix
+\section{Reproducibility}\label{app:repro}
+\begin{sloppypar}
+Code and run files are in the public repository \url{https://github.com/Manish06N/kgrag-poisoning-defence-code}. Tables are regenerated with \texttt{python -m kgrag.report}; the review checks with \texttt{scripts/review\_checks.py} and \texttt{scripts/gcr\_rescore.py}. Local runs used a 16~GB GPU, 4-bit nf4 weights and transformers 4.57.6. HPC (bf16) runs write to \texttt{runs/kg\_bf16/} via the environment variable \texttt{KG\_RUNS}. HPC reproduction check (job T0, 50 clean WebQSP questions): 4-bit F1 69.0, identical to the laptop run; bf16 F1 66.4 (9 of 50 predictions differ, too few to say whether this is noise); full-set (1,328 question) bf16 results are in Section~\ref{sec:bf16} (archive \texttt{results\_bf16\_T1\_2026-10-09.tar.gz}, SHA-256 prefix f0fb13733cae1b71). Strict-label reruns write to \texttt{runs/kg\_strict/} and the MultiGraph ablation to \texttt{runs/kg\_mg/} via \texttt{KG\_RUNS}; \texttt{scripts/gcr\_defence\_report.py} regenerates the GCR table and \texttt{scripts/make\_figures.py} the data figures.
+
+\end{sloppypar}
+
 
 \end{document}
